@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Coded by gitforge | www.gitforge.in on 5th August 2023 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="gitforge.in">
+    <meta name="description" content="Create Shareable UPI Payment Link of your UPI ID developed by gitforge.in!">
+    <link rel="icon" href="https://lib.gitforge.in/images/FastUPI.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="/css" />
+    <link rel="stylesheet" href="https://lib.gitforge.in/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <title>Shareable UPI Link | GitForge</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174919510-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-174919510-1');
+    </script>
+</head>
+<body>
+    <div class="card">
+        <div class="banner">
+            <img height=360px; src="/qr/{{ id }}/{{ amount }}">
+        </div>
+        {% if amount %}
+        <h2 class="name animate__animated animate__tada">Paying {{ amount }}₹ to {{ id }}</h2>
+        {% else %}
+        <h2 class="name animate__animated animate__tada">Paying to {{ id }}</h2>
+        {% endif %}
+        <div class="title">Secure and instant payments powered by
+            <br><br>
+            <img height="36px" src="https://camo.githubusercontent.com/4d60d7737ca400d5bb5dddb4255b5b46b4489c86b41710365e88e07e81b2a05c/68747470733a2f2f74656c656772612e70682f66696c652f3033633435383165626432613065323139373264652e706e67">
+            <img height="36px" src="https://camo.githubusercontent.com/ca4a4a5a99e85af1f38e8e8373412c3cba1254bc15f30ccabae67938e50ac3e3/68747470733a2f2f74656c656772612e70682f66696c652f6532393061623464316462663161653164616231302e706e67">
+        </div>
+        <div class="actions">
+            <div class="pay-btn">
+                {% if amount %}
+                <a href="upi://pay?pn=UPAYI&pa={{ id }}&cu=INR&am={{ amount }}"> <button>Pay Now</button></a>
+                {% else %}
+                <a href="upi://pay?pn=UPAYI&pa={{ id }}&cu=INR"> <button>Pay Now</button></a>
+                {% endif %}
+                <br><br>
+                <a href="/"> <button>Create your Fast UPI Link</button></a>
+                <br>
+            </div>
+        </div>
+        <div class="desc link"> <a href="https://www.gitforge.in">Made with <span class="love">❤️</span> by GitForge</a></div>
+    </div>
+</body>
+</html>

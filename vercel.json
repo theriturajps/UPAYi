@@ -1,0 +1,12 @@
+{
+    "name": "UPAYI",
+    "version": 2,
+    "builds": [{
+        "src": "*.py",
+        "use": "@vercel/python"
+    }],
+    "routes": [{
+        "src": "(.*)",
+        "dest": "main.py"
+    }]
+}
