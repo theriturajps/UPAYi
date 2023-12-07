@@ -8,7 +8,7 @@
     <link rel="icon" href="https://pkg.gitforge.in/img/transfer.png" type="image/png" />
     <link rel="stylesheet" type="text/css" href="/css" />
     <link rel="stylesheet" href="https://lib.gitforge.in/ajax/libs/animate.css/4.0.0/animate.min.css" />
-    <title>Shareable UPI Link | GitForge</title>
+    <title>UPAYi | GitForge</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQ5NDJ2R9J"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -24,8 +24,8 @@
         <div class="banner2">
             <img height=180px; src="https://pkg.gitforge.in/img/qr.png">
         </div>
-        <h2 class="create-name">Create shareable UPI Payment Fast links!</h2>
-        <p class="create">Just add your UPI ID here<br><b>https://upi.gitforge.in/&lt;your-upi-id&gt;/&lt;amount&gt;</b><br><br>Or,<br><b>Use our UPI Link Generator Tool</b></p>
+        <h2 class="create-name">Create UPAYi Fast links!</h2>
+        <p class="create">Just add your UPI ID here<br><b>https://upayi.gitforge.in/&lt;your-upi-id&gt;/&lt;amount&gt;</b><br><br>Or,<br><b>Use our UPAYi Generator</b></p>
         <div class="actions">
             <div class="pay-btn">
                 <input type="text" placeholder="Enter your UPI ID" id="upiid">
@@ -52,7 +52,7 @@
         var upilink = document.getElementById("upilink");
         var tooltip = document.getElementById("myTooltip");
         var paragraph = document.getElementsByClassName("create")[0];
-        paragraph.innerHTML = paragraph.innerHTML.replace("https://upi.gitforge.in", baseUrl);
+        paragraph.innerHTML = paragraph.innerHTML.replace("https://upayi.gitforge.in", baseUrl);
         function getLink() {
             if (upiid.value.indexOf("@") != -1) {
                 var amount = "";
